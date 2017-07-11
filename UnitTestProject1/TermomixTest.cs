@@ -18,7 +18,10 @@ namespace UnitTestProject1
             Termomix sut = new Termomix();
             sut.calentar = new CalentarMock();
             sut.pesar = new PesarMock();
-            sut.PreparaPlatos(lechuga, tomate);
+            Plato plato = sut.PreparaPlatos(lechuga, tomate);
+
+            Assert.AreEqual(plato.alimento1.peso, 2);
+            Assert.AreEqual(plato.alimento2.peso, 2);
 
         }
 
