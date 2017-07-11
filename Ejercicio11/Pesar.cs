@@ -12,7 +12,7 @@ namespace Ejercicio11
         {
             int peso = 0;
 
-            peso = a1.peso + a2.peso;
+            peso = a1.Peso + a2.Peso;
 
             return peso;
         }

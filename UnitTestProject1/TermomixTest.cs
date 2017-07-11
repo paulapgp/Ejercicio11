@@ -12,16 +12,16 @@ namespace UnitTestProject1
         {
             Alimento lechuga = new Alimento();
             Alimento tomate = new Alimento();
-            lechuga.peso = 2;
-            tomate.peso = 2;
+            lechuga.Peso = 2;
+            tomate.Peso = 2;
 
             Termomix sut = new Termomix();
             sut.calentar = new CalentarMock();
             sut.pesar = new PesarMock();
             Plato plato = sut.PreparaPlatos(lechuga, tomate);
 
-            Assert.AreEqual(plato.alimento1.peso, 2);
-            Assert.AreEqual(plato.alimento2.peso, 2);
+            Assert.AreEqual(plato.alimento1.Peso, 2);
+            Assert.AreEqual(plato.alimento2.Peso, 2);
 
         }
 

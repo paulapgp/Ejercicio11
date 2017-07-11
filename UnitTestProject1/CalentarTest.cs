@@ -5,20 +5,21 @@ using Ejercicio11;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class PesarTest
+    public class CalentarTest
     {
         [TestMethod]
-        public void TestPesarAlimentos()
+        public void TestCalentarAlimentos()
         {
             Alimento lechuga = new Alimento();
             Alimento tomate = new Alimento();
             lechuga.Peso = 2;
             tomate.Peso = 2;
 
-            Pesar sut = new Pesar();
-           int resultado = sut.PesarAlimentos(lechuga, tomate);
+            Calentar sut = new Calentar();
+            sut.CalentarAlimentos(lechuga, tomate);
 
-            Assert.AreEqual(resultado, 4);
+            Assert.IsTrue(lechuga.Calentado);
+            Assert.IsTrue(tomate.Calentado);
         }
     }
 }

@@ -8,6 +8,19 @@ namespace Ejercicio11
 {
     public class Alimento
     {
-        public int peso { get; set; }
+        public int Peso { get; set; }
+        public bool Calentado { get; set; }
+
+        public Alimento()
+        {
+            Peso = 0;
+            Calentado = false;
+        }
+
+        public Alimento(int _Peso, bool _Calentado)
+        {
+            this.Peso = _Peso;
+            this.Calentado = _Calentado;
+        }
     }
 }
