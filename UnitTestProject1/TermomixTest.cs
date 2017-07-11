@@ -16,8 +16,8 @@ namespace UnitTestProject1
             tomate.Peso = 2;
 
             Termomix sut = new Termomix();
-            sut.calentar = new CalentarMock();
-            sut.pesar = new PesarMock();
+            sut.cocina = new CalentarMock();
+            sut.bascula = new PesarMock();
             Plato plato = sut.PreparaPlatos(lechuga, tomate);
 
             Assert.AreEqual(plato.alimento1.Peso, 2);
@@ -25,15 +25,15 @@ namespace UnitTestProject1
 
         }
 
-        public class PesarMock : IPesar
+        public class PesarMock : IBascula
         {
-            public int PesarAlimentos(Alimento a1, Alimento a2)
+            public float PesarAlimentos(Alimento a)
             {
                 return 8;
             }
         }
 
-        public class CalentarMock : ICalentar
+        public class CalentarMock : ICocina
         {
             public void CalentarAlimentos(Alimento a1, Alimento a2)
             {

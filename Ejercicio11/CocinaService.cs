@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio11
 {
-    public class Calentar : ICalentar
+    public class CocinaService : ICocina
     {
 
         public void CalentarAlimentos(Alimento a1, Alimento a2)

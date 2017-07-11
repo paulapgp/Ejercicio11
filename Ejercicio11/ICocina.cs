@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio11
 {
-    public interface ICalentar
+    public interface ICocina
     {
         void CalentarAlimentos(Alimento a1, Alimento a2);
     }

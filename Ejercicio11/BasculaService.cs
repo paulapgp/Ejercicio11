@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio11
 {
-    public class Pesar : IPesar
+    public class BasculaService : IBascula
     {
-        public int PesarAlimentos(Alimento a1, Alimento a2)
+        public float PesarAlimentos(Alimento a)
         {
-            int peso = 0;
+            float peso = 0;
 
-            peso = a1.Peso + a2.Peso;
+            peso = a.Peso;
 
             return peso;
         }

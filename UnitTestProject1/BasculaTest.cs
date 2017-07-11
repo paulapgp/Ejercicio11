@@ -5,21 +5,23 @@ using Ejercicio11;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class CalentarTest
+    public class BasculaTest
     {
         [TestMethod]
-        public void TestCalentarAlimentos()
+        public void TestPesarAlimentos()
         {
             Alimento lechuga = new Alimento();
             Alimento tomate = new Alimento();
             lechuga.Peso = 2;
             tomate.Peso = 2;
 
-            Calentar sut = new Calentar();
-            sut.CalentarAlimentos(lechuga, tomate);
+            IBascula sut = new BasculaService();
+            float peso1 = sut.PesarAlimentos(lechuga);
+            float peso2 = sut.PesarAlimentos(tomate);
 
-            Assert.IsTrue(lechuga.Calentado);
-            Assert.IsTrue(tomate.Calentado);
+            float resultado = peso1 + peso2;
+
+            Assert.AreEqual(resultado, 4);
         }
     }
 }
